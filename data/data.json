@@ -1,0 +1,28 @@
+{
+  "lists": [
+    {
+      "category": "중요할일",
+      "color": "#2EDCBF",
+      "todo": {},
+      "id": 1
+    },
+    {
+      "category": "오늘 할일",
+      "color": "#2EDC70",
+      "todo": {},
+      "id": 2
+    },
+    {
+      "category": "취미",
+      "color": "#732EDC",
+      "todo": {},
+      "id": 3
+    },
+    {
+      "category": "단간론파",
+      "color": "#DC2E2E",
+      "todo": {},
+      "id": 4
+    }
+  ]
+}

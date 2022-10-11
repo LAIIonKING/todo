@@ -2,26 +2,29 @@
   "lists": [
     {
       "category": "중요할일",
-      "color": "#2EDCBF",
-      "todo": {},
+      "color": "#2E53DC",
+      "todo": [
+        "입력asdff",
+        "입력"
+      ],
       "id": 1
     },
     {
       "category": "오늘 할일",
-      "color": "#2EDC70",
-      "todo": {},
+      "color": "#732EDC",
+      "todo": [],
       "id": 2
     },
     {
       "category": "취미",
       "color": "#732EDC",
-      "todo": {},
+      "todo": [],
       "id": 3
     },
     {
-      "category": "단간론파",
-      "color": "#DC2E2E",
-      "todo": {},
+      "category": "왜안되지",
+      "color": "#2EDCBF",
+      "todo": [],
       "id": 4
     }
   ]

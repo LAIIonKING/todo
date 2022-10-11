@@ -2,7 +2,7 @@ import { useState } from "react"
 import ColorPick from './ColorPick'
 import { fetchCreate } from "../util/api";
 
-const AddCategory = ({setIsClick, setIsClickAdd}) => {
+const AddCategory = ({setIsClick, setIsClickAdd, setColor, color}) => {
 
     //backButton
     const clickBack = () => {
@@ -11,28 +11,31 @@ const AddCategory = ({setIsClick, setIsClickAdd}) => {
     }
 
     //categoryAdd
-    const [category, setCategory] = useState('');
+    const [category, setCategory] = useState(null);
     const inputText = (e) => {
         setCategory(e.target.value)
     }
 
-    //color
-    const [color, setColor] = useState('')
-
     //editWrite
     const handleWrite = (e) => {
         //전부 다 값이 있으면 wirte
-        e.preventDefault();
-        const data = {category, color, todo: {}}
-        fetchCreate("http://localhost:3001/lists/", data)
-        setIsClickAdd(false)
-        setIsClick(true)
+        if(category && color){
+            e.preventDefault();
+            const data = {category, color, todo: []}
+            fetchCreate("http://localhost:3001/lists/", data)
+            setIsClickAdd(false)
+            setIsClick(true)
+        }else if(!category){
+            alert('이름을 입력해주세요')
+        }else if(!color){
+            alert('색상을 선택해주세요')
+        }
     }
 
     return (
         <div className="addCategory">
-            <h2>카테고리 추가</h2>
             <button className='backBtn' onClick={clickBack}>back</button>
+            <h2>카테고리 추가</h2>
             <input type='text' placeholder={'입력'} onChange={inputText}></input>
             <h3>색상</h3>
             <ColorPick setColor={setColor}/>

@@ -2,23 +2,39 @@
   "lists": [
     {
       "category": "중요할일",
-      "color": "#2E53DC",
+      "color": "#DC2E2E",
       "todo": [
-        "입력asdff",
-        "입력"
+        {
+          "text": "이건잘바뀌는데말이야",
+          "check": true
+        }
       ],
       "id": 1
     },
     {
       "category": "오늘 할일",
-      "color": "#732EDC",
-      "todo": [],
+      "color": "#2EDCBF",
+      "todo": [
+        {
+          "text": "말랑이 쿼카",
+          "check": true
+        },
+        {
+          "text": "밀크티",
+          "check": false
+        }
+      ],
       "id": 2
     },
     {
       "category": "취미",
       "color": "#732EDC",
-      "todo": [],
+      "todo": [
+        {
+          "text": "기타치기",
+          "check": true
+        }
+      ],
       "id": 3
     },
     {
@@ -26,6 +42,12 @@
       "color": "#2EDCBF",
       "todo": [],
       "id": 4
+    },
+    {
+      "category": "할일",
+      "color": "#DC2E2E",
+      "todo": [],
+      "id": 5
     }
   ]
 }

@@ -7,8 +7,8 @@ const TodoCategory = ({list}) => {
     return (
         <div className='toDoCategory'>
             <Category list={list}/>
-            {list.todo.map((text, idx) => (
-                    <Todo text={text} list={list} idx={idx}/>
+            {list.todo.map((todo, idx) => (
+                    <Todo todo={todo} list={list} idx={idx}/>
             ))}
             
         </div>

@@ -18,9 +18,10 @@ const Navbar = ({lists}) => {
         <div>
             <nav className="navbar">
                 <h1>To Do List</h1>
-                <button onClick={clickPencil}>pencil</button>
+                <button onClick={clickPencil} className="pencil"><i class="fa-regular fa-pen-to-square"></i></button>
             </nav>
-            <div className='modal'>
+            <div className='line'></div>
+            <div className={isClick ? 'modal' : null}>
                 {isClick ? <EditModal lists={lists} setIsClick={setIsClick} setIsClickAdd={setIsClickAdd} setIsClickDlt={setIsClickDlt} setEditId={setEditId}/> : null}
                 {isClickAdd ? <AddCategory setIsClick={setIsClick} setIsClickAdd={setIsClickAdd} setColor={setColor} color={color}/> : null}
                 {isClickDlt ? <DeleteCategory lists={lists} setIsClick={setIsClick} setIsClickDlt={setIsClickDlt} editId={editId} setColor={setColor} color={color}/> : null}

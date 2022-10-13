@@ -20,8 +20,11 @@ const EditModal = ({lists, setIsClick, setIsClickAdd, setIsClickDlt, setEditId})
 
     return (
         <div className='editModal'>
-            <button className='editClose' onClick={clickClose}>x</button>
-            <button className='addButton' onClick={clickAdd}>+</button>
+            <div className='modalNav'>
+                <button className='editClose' onClick={clickClose}>x</button>
+                <h2>카테고리 편집</h2>
+                <button className='addButton' onClick={clickAdd}>+</button>
+            </div>
             <EditCategoryList lists={lists} clickDelet={clickDelet} setEditId={setEditId}/>
             <button className='editWrite' onClick={clickClose}>확인</button>
         </div>

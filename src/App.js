@@ -8,7 +8,7 @@ function App() {
   const [lists] = useFetch("http://localhost:3001/lists/");
 
   return (
-    <div className="App">
+    <div className="app">
       <Navbar lists={lists}/>
         <div className='content'>
           <TodoList lists={lists}/>

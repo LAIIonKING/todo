@@ -1,15 +1,15 @@
 import { useState } from "react";
 import { fetchPatch } from "../util/api";
 
-const Todo = ({text, list, idx}) => {
-    const [todoText, setTodoText] = useState(text)
+const Todo = ({todo, list, idx}) => {
+    const [todoText, setTodoText] = useState(todo.text)
     const editTodo = (e) => {
         e.preventDefault();
         setTodoText(e.target.value)
     }
     const editCom = () => {
         let data = list.todo.slice();
-        data[idx] = todoText;
+        data[idx].text = todoText;
         fetchPatch("http://localhost:3001/lists/", list.id, {todo: data});
     }
 
@@ -24,11 +24,30 @@ const Todo = ({text, list, idx}) => {
             return false;
         }
     }
+
+    //checkbox
+    const handleCheck = () => {
+        if(!todo.check){
+            let dataT = list.todo.slice();
+            dataT[idx].check = true;
+            fetchPatch("http://localhost:3001/lists/", list.id, {todo: dataT});
+        }
+        else if(todo.check){
+            let dataF = list.todo.slice();
+            dataF[idx].check = false;
+            fetchPatch("http://localhost:3001/lists/", list.id, {todo: dataF});
+        }
+    }
+
     return (
         <div className="todo">
-            <input type='checkbox'></input>
-            <input type='text' value={todoText} onChange={editTodo} onBlur={editCom}></input>
-            <button onClick={deletTodo}>Dlt</button>
+            {todo.check ? 
+                <button className="checkbox checked" style={{backgroundColor: list.color}} onClick={handleCheck}><i class="fa-solid fa-check"></i></button>
+                : 
+                <button className="checkbox noncheck" onClick={handleCheck}>{ }</button>
+            }
+            <input className='todoInput' type='text' value={todoText} onChange={editTodo} onBlur={editCom}></input>
+            <button className="todoDlt" onClick={deletTodo}><i class="fa-solid fa-minus"></i></button>
         </div>
     )
 }

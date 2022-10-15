@@ -43,12 +43,15 @@ const DeleteCategory = ({lists, setIsClick, setIsClickDlt, editId, setColor, col
 
     return (
         <div className="deleteCategory">
-            <button className='backBtn' onClick={clickBack}>back</button>
-            <h2>카테고리 편집</h2>
-            <input type='text' onChange={editInput} value={listCategory}></input>
+            <div className='modalNav'>
+                <button className='editClose' onClick={clickBack}><i class="fa-solid fa-chevron-left"></i></button>
+                <h2>카테고리 편집</h2>
+                <button className="delete" onClick={handleDelete}><i class="fa-solid fa-trash-can"></i></button>
+            </div>
+            <input className="editInput" type='text' onChange={editInput} value={listCategory}></input>
             <h3>색상</h3>
             <ColorPick setColor={setColor}/>
-            <button className="delete" onClick={handleDelete}>삭제</button>
+            
             <button className='editWrite' onClick={handleWrite}>확인</button>
         </div>
     )

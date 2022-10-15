@@ -2,7 +2,7 @@
   "lists": [
     {
       "category": "중요할일",
-      "color": "#DC2E2E",
+      "color": "#64C3C9",
       "todo": [
         {
           "text": "이건잘바뀌는데말이야",
@@ -13,7 +13,7 @@
     },
     {
       "category": "오늘 할일",
-      "color": "#2EDCBF",
+      "color": "#FACF34",
       "todo": [
         {
           "text": "말랑이 쿼카",
@@ -27,20 +27,14 @@
       "id": 2
     },
     {
-      "category": "취미",
-      "color": "#732EDC",
+      "category": "제가 만들었어요",
+      "color": "#C6D458",
       "todo": [
         {
-          "text": "기타치기",
+          "text": "너무 잘한듯 ㅎㅎ",
           "check": true
         }
       ],
-      "id": 3
-    },
-    {
-      "category": "왜안되지",
-      "color": "#2EDCBF",
-      "todo": [],
       "id": 4
     },
     {

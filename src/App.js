@@ -13,7 +13,7 @@ function App() {
         <div className='content'>
           <TodoList lists={lists}/>
         </div>
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   );
 }

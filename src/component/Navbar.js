@@ -10,9 +10,11 @@ const Navbar = ({lists}) => {
     const [isClickDlt, setIsClickDlt] = useState(false);
     const [editId, setEditId] = useState('')
     const [color, setColor] = useState(null)
+    const [isClickMo, setIsClickMo] = useState(false);
 
     const clickPencil = () => {
-        setIsClick(true)
+        setIsClick(true);
+        setIsClickMo(true);
     }
     return (
         <div>
@@ -21,8 +23,8 @@ const Navbar = ({lists}) => {
                 <button onClick={clickPencil} className="pencil"><i class="fa-regular fa-pen-to-square"></i></button>
             </nav>
             <div className='line'></div>
-            <div className={isClick ? 'modal' : null}>
-                {isClick ? <EditModal lists={lists} setIsClick={setIsClick} setIsClickAdd={setIsClickAdd} setIsClickDlt={setIsClickDlt} setEditId={setEditId}/> : null}
+            <div className={isClickMo ? 'modal' : null}>
+                {isClick ? <EditModal lists={lists} setIsClick={setIsClick} setIsClickAdd={setIsClickAdd} setIsClickDlt={setIsClickDlt} setEditId={setEditId} setIsClickMo={setIsClickMo}/> : null}
                 {isClickAdd ? <AddCategory setIsClick={setIsClick} setIsClickAdd={setIsClickAdd} setColor={setColor} color={color}/> : null}
                 {isClickDlt ? <DeleteCategory lists={lists} setIsClick={setIsClick} setIsClickDlt={setIsClickDlt} editId={editId} setColor={setColor} color={color}/> : null}
             </div>

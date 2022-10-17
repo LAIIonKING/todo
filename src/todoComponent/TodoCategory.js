@@ -8,7 +8,7 @@ const TodoCategory = ({list}) => {
         <div className='toDoCategory'>
             <Category list={list}/>
             {list.todo.map((todo, idx) => (
-                    <Todo todo={todo} list={list} idx={idx}/>
+                    <Todo todo={todo} list={list} idx={idx} key={idx}/>
             ))}
             
         </div>

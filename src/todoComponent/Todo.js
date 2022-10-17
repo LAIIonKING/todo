@@ -42,12 +42,12 @@ const Todo = ({todo, list, idx}) => {
     return (
         <div className="todo">
             {todo.check ? 
-                <button className="checkbox checked" style={{backgroundColor: list.color}} onClick={handleCheck}><i class="fa-solid fa-check"></i></button>
+                <button className="checkbox checked" style={{backgroundColor: list.color}} onClick={handleCheck}><i className="fa-solid fa-check"></i></button>
                 : 
                 <button className="checkbox noncheck" onClick={handleCheck}>{ }</button>
             }
             <input className='todoInput' type='text' value={todoText} onChange={editTodo} onBlur={editCom}></input>
-            <button className="todoDlt" onClick={deletTodo}><i class="fa-solid fa-minus"></i></button>
+            <button className="todoDlt" onClick={deletTodo}><i className="fa-solid fa-minus"></i></button>
         </div>
     )
 }

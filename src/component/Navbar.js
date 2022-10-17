@@ -20,7 +20,7 @@ const Navbar = ({lists}) => {
         <div>
             <nav className="navbar">
                 <h1>To Do List</h1>
-                <button onClick={clickPencil} className="pencil"><i class="fa-regular fa-pen-to-square"></i></button>
+                <button onClick={clickPencil} className="pencil"><i className="fa-regular fa-pen-to-square"></i></button>
             </nav>
             <div className='line'></div>
             <div className={isClickMo ? 'modal' : null}>

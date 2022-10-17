@@ -21,8 +21,8 @@ const ColorPick = ({setColor}) => {
 
     return (
         <div className='colorList'>
-            {colors.map(cl => (
-                <button name={cl} className='colorCircle' onClick={clickBtn} style={{backgroundColor: cl}}></button>
+            {colors.map((cl, idx) => (
+                <button name={cl} className='colorCircle' onClick={clickBtn} style={{backgroundColor: cl}} key={idx}></button>
             ))}
         </div>
     )

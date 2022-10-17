@@ -7,7 +7,7 @@ const Category = ({list}) => {
     return (
         <div className='category' style={{color: list.color}}>
             {list.category}
-            <button onClick={handleAdd} className='addTodoBtn'><i class="fa-solid fa-plus"></i></button>
+            <button onClick={handleAdd} className='addTodoBtn'><i className="fa-solid fa-plus"></i></button>
         </div>
     )
 }

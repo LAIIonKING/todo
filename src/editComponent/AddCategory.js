@@ -35,7 +35,7 @@ const AddCategory = ({setIsClick, setIsClickAdd, setColor, color}) => {
     return (
         <div className="addCategory">
             <div className='modalNav'>
-                <button className='editClose' onClick={clickBack}><i class="fa-solid fa-chevron-left"></i></button>
+                <button className='editClose' onClick={clickBack}><i className="fa-solid fa-chevron-left"></i></button>
                 <h2>카테고리 추가</h2>
             </div>
             <input className="addtextInput" type='text' placeholder={'입력'} onChange={inputText}></input>

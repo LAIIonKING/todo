@@ -1,46 +1,51 @@
 {
   "lists": [
     {
-      "category": "중요할일",
+      "category": "오늘 할일",
       "color": "#42D9E7",
       "todo": [
         {
-          "text": "이건잘바뀌는데말이야",
+          "text": "말랑이 만지기",
           "check": true
         }
       ],
       "id": 1
     },
     {
-      "category": "오늘 할일",
-      "color": "#FACF34",
+      "category": "프로젝트",
+      "color": "#FF8F08",
       "todo": [
         {
-          "text": "말랑이 쿼카",
+          "text": "리액트 달력 라이브러리 확인",
           "check": true
         },
         {
-          "text": "밀크티",
+          "text": "애니메이션 CSS",
           "check": false
         }
       ],
       "id": 2
     },
     {
-      "category": "제가 만들었어요",
+      "category": "코딩 테스트",
       "color": "#C6D458",
       "todo": [
         {
-          "text": "너무 잘한듯 ㅎㅎ",
-          "check": true
+          "text": "BFS 문제풀기",
+          "check": false
         }
       ],
       "id": 4
     },
     {
-      "category": "할일",
-      "color": "#DC2E2E",
-      "todo": [],
+      "category": "취미",
+      "color": "#1CA6EB",
+      "todo": [
+        {
+          "text": "오버워치 배치완료",
+          "check": false
+        }
+      ],
       "id": 5
     }
   ]

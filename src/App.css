@@ -91,7 +91,7 @@ button {
   display: flex;
   flex-direction: column;
   margin-top: 70px;
-  margin-left: 100px;
+  /* margin-left: 100px; */
 }
 
 .category{
@@ -129,7 +129,7 @@ button {
 
 .noncheck{
   position:relative;
-  top: 2px;
+  top: 3px;
 }
 
 .checkbox:hover{
